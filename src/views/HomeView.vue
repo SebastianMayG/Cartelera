@@ -2,6 +2,12 @@
 import { ref } from 'vue';
 import Card from 'primevue/card';
 import Button from 'primevue/button';
+import Toast from 'primevue/toast';
+import { useToast } from "primevue/usetoast";
+import 'primeicons/primeicons.css';
+
+const toast = useToast();
+
 const events = ref([
   {
     id: 1,
@@ -29,19 +35,29 @@ const events = ref([
     location: 'Puerta de Tierra',
     date: 'Todos los viernes',
     time: '21:00 hrs'
-  }
+  },
+  {
+    id: 4,
+    imageUrl: 'https://campeche.travel/wp-content/uploads/2020/03/02-2.jpg',
+    title: 'Festival Gastronómico del Mar',
+    description: 'Degusta los mejores platillos de mariscos de la región.',
+    location: 'Centro de Convenciones Siglo XXI',
+    date: '2025-04-20',
+    time: '12:00 hrs - 18:00 hrs'
+  },
 ]);
 
 const handleInscription = (eventId) => {
   console.log(`Inscribirse al evento con ID: ${eventId}`);
-
-  alert(`Inscripción solicitada para el evento ${eventId}`);
+  toast.add({ severity: 'info', summary: 'Info', detail: 'Inscrito al evento', life: 3000 });
+  //alert(`Inscripción solicitada para el evento ${eventId}`);
 };
 
 </script>
 
 <template>
   <main>
+    <Toast />
     <div class="hero-section">
       <div class="hero-overlay">
         <img
@@ -69,6 +85,7 @@ const handleInscription = (eventId) => {
           <p>{{ event.description }}</p>
         </template>
         <template #footer>
+
           <Button label="Inscribirme" icon="pi pi-user-plus" class="p-button-sm" @click="handleInscription(event.id)" />
         </template>
       </Card>
