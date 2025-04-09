@@ -8,7 +8,6 @@ import 'primeicons/primeicons.css';
 
 const toast = useToast();
 
-
 const events = ref([
   {
     id: 1,
