@@ -8,42 +8,52 @@ import 'primeicons/primeicons.css';
 
 const toast = useToast();
 
+
 const events = ref([
   {
     id: 1,
-    imageUrl: 'https://media.istockphoto.com/id/862524660/es/foto/malec%C3%B3n-de-campeche.jpg?s=1024x1024&w=is&k=20&c=zn8aRqbOr-tVr6sP7zwOurH4lWHIKkhVc4gpmIpsWd0=',
-    title: 'Concierto Bajo las Estrellas',
-    description: 'Disfruta de una noche mágica con música en vivo al aire libre.',
-    location: 'Malecón de Campeche',
-    date: '2025-04-15',
-    time: '20:00 hrs'
+    imageUrl: 'artesMundoNeurodivergentes.jpeg',
+    title: 'Las artes y el mundo neurodivergente en primera persona',
+    description: 'Festival conmemorativo al día internacional de la conciencia sobre el autismo',
+    location: 'Centro de Formación y Producción de Artes Visuales La Arrocera',
+    date: '2025-04-11',
+    time: '19:00 hrs'
   },
   {
     id: 2,
-    imageUrl: 'https://campeche.travel/wp-content/uploads/2020/03/02-2.jpg',
-    title: 'Festival Gastronómico del Mar',
-    description: 'Degusta los mejores platillos de mariscos de la región.',
-    location: 'Centro de Convenciones Siglo XXI',
-    date: '2025-04-20',
-    time: '12:00 hrs - 18:00 hrs'
+    imageUrl: 'HoraCuento.jpg',
+    title: 'La Hora del Cuento',
+    description: 'Presentación del libro Cuentame lo que te imagínas, relatos de niñas y niños',
+    location: 'Biblioteca Pública Central Lic. Francisco Sosa Escalante',
+    date: '2025-04-12',
+    time: '10:00 hrs'
   },
   {
     id: 3,
-    imageUrl: 'https://www.mexicoescultura.com/galerias/actividades/principal/puerta_de_tierra_campeche_galeria_min.jpg',
-    title: 'Recorrido Histórico Nocturno',
-    description: 'Descubre los secretos de la ciudad amurallada bajo la luz de la luna.',
-    location: 'Puerta de Tierra',
-    date: 'Todos los viernes',
-    time: '21:00 hrs'
+    imageUrl: 'ObrasBeethoven.jpg',
+    title: 'Obras de Beethoven y Haydn',
+    description: 'Orquesta Sinfónica de Campeche interpretando Beethoven y Haydn',
+    location: 'Teatro Francisco de Paula Toro',
+    date: '2025-04-12',
+    time: '20:00 hrs'
   },
   {
     id: 4,
-    imageUrl: 'https://campeche.travel/wp-content/uploads/2020/03/02-2.jpg',
-    title: 'Festival Gastronómico del Mar',
+    imageUrl: 'ElArbolLecturaDramatizada.jpg',
+    title: 'El Árbol lectura dramatizada',
+    description: 'Lectura dramatizada versión libre',
+    location: 'Sala Teatro Manuel Ávila Cano del Centro Cultural El Claustro',
+    date: '2025-04-10',
+    time: '20:00 hrs'
+  },
+  {
+    id: 5,
+    imageUrl: 'BrigadaCorteCabello.jpg',
+    title: 'Brigada de Corte de Cabello Para niñas y damas',
     description: 'Degusta los mejores platillos de mariscos de la región.',
     location: 'Centro de Convenciones Siglo XXI',
-    date: '2025-04-20',
-    time: '12:00 hrs - 18:00 hrs'
+    date: '2025-04-07 - 2025-04-09',
+    time: '18:00 hrs - 20:00 hrs'
   },
 ]);
 
@@ -152,9 +162,9 @@ const handleInscription = (eventId) => {
 
 .event-image {
   width: 100%;
-  height: 200px;
+  height: 400px;
   /* Ajusta la altura según necesites */
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 
