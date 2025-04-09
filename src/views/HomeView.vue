@@ -16,7 +16,8 @@ const events = ref([
     description: 'Festival conmemorativo al día internacional de la conciencia sobre el autismo',
     location: 'Centro de Formación y Producción de Artes Visuales La Arrocera',
     date: '2025-04-11',
-    time: '19:00 hrs'
+    time: '19:00 hrs',
+    mapsUrl: 'https://maps.app.goo.gl/2yR4wndqXdMSLBv38'
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ const events = ref([
     description: 'Presentación del libro Cuentame lo que te imagínas, relatos de niñas y niños',
     location: 'Biblioteca Pública Central Lic. Francisco Sosa Escalante',
     date: '2025-04-12',
-    time: '10:00 hrs'
+    time: '10:00 hrs',
+    mapsUrl: 'https://maps.app.goo.gl/FVDhxH1Vyir62erH6'
   },
   {
     id: 3,
@@ -34,7 +36,8 @@ const events = ref([
     description: 'Orquesta Sinfónica de Campeche interpretando Beethoven y Haydn',
     location: 'Teatro Francisco de Paula Toro',
     date: '2025-04-12',
-    time: '20:00 hrs'
+    time: '20:00 hrs',
+    mapsUrl: 'https://maps.app.goo.gl/kdHupbhqZSQsvtco6'
   },
   {
     id: 4,
@@ -43,16 +46,18 @@ const events = ref([
     description: 'Lectura dramatizada versión libre',
     location: 'Sala Teatro Manuel Ávila Cano del Centro Cultural El Claustro',
     date: '2025-04-10',
-    time: '20:00 hrs'
+    time: '20:00 hrs',
+    mapsUrl: 'https://maps.app.goo.gl/sLzVioe9F17DiUic9'
   },
   {
     id: 5,
     imageUrl: 'BrigadaCorteCabello.jpg',
     title: 'Brigada de Corte de Cabello Para niñas y damas',
     description: 'Degusta los mejores platillos de mariscos de la región.',
-    location: 'Centro de Convenciones Siglo XXI',
+    location: 'Centro de Desarrollo Comunitario Imí II',
     date: '2025-04-07 - 2025-04-09',
-    time: '18:00 hrs - 20:00 hrs'
+    time: '18:00 hrs - 20:00 hrs',
+    mapsUrl: 'https://maps.app.goo.gl/haeUfv6yFQCSpaG98'
   },
 ]);
 
@@ -86,7 +91,7 @@ const handleInscription = (eventId) => {
         </template>
         <template #subtitle>
           <div class="text-sm text-gray-600">
-            <i class="pi pi-map-marker mr-1"></i> {{ event.location }} <br />
+            <i class="pi pi-map-marker mr-1"></i> <a :href=event.mapsUrl target="_blank">{{ event.location }}</a> <br />
             <i class="pi pi-calendar mr-1"></i> {{ event.date }} | <i class="pi pi-clock mr-1"></i> {{ event.time }}
           </div>
         </template>
@@ -94,7 +99,7 @@ const handleInscription = (eventId) => {
           <p>{{ event.description }}</p>
         </template>
         <template #footer>
-
+          
           <Button label="Inscribirme" icon="pi pi-user-plus" class="p-button-sm" @click="handleInscription(event.id)" />
         </template>
       </Card>
