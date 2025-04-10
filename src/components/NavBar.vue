@@ -18,7 +18,7 @@ const items = ref([
     icon: 'pi pi-bell',
   },
   {
-    label: 'Contacto',
+    label: 'Contactanos',
     icon: 'pi pi-envelope',
     command: () => {
       router.push('/contactanos')

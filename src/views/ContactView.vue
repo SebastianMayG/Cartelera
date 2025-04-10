@@ -6,7 +6,7 @@ const value = ref(null);
 
 <template>
 <div class="container">
-  <form action="action_page.php">
+  <form>
 
     <label for="name">Nombre</label>
     <input type="text" id="name" name="name" placeholder="Nombre">
@@ -29,7 +29,7 @@ const value = ref(null);
 input[type=text], select, textarea {
   width: 100%; /* Full width */
   padding: 12px; /* Some padding */ 
-  border: 1px solid #ccc; /* Gray border */
+  border: 1px solid #9e9e9e; /* Gray border */
   border-radius: 4px; /* Rounded borders */
   box-sizing: border-box; /* Make sure that padding and width stays in place */
   margin-top: 6px; /* Add a top margin */
