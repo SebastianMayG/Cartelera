@@ -5,23 +5,19 @@ export const useCarruselStore = defineStore('carrusel', () => {
     const carruseles = ref([
         {
           id: 1,
-          imageUrl: "https://media.istockphoto.com/id/1294450400/es/foto/campeche-mexico.jpg?s=1024x1024&w=is&k=20&c=GOQlycs308m75rKlAZr3g5kAbd841_tvxXX3g6CxHZI=",
+          imageUrl: "1.png",
         },
         {
           id: 2,
-          imageUrl: "https://media.istockphoto.com/id/1294450400/es/foto/campeche-mexico.jpg?s=1024x1024&w=is&k=20&c=GOQlycs308m75rKlAZr3g5kAbd841_tvxXX3g6CxHZI=",
+          imageUrl: "2.png",
         },
         {
           id: 3,
-          imageUrl: "https://media.istockphoto.com/id/1294450400/es/foto/campeche-mexico.jpg?s=1024x1024&w=is&k=20&c=GOQlycs308m75rKlAZr3g5kAbd841_tvxXX3g6CxHZI=",
+          imageUrl: "3.png",
         },
         {
           id: 4,
-          imageUrl: "https://media.istockphoto.com/id/1294450400/es/foto/campeche-mexico.jpg?s=1024x1024&w=is&k=20&c=GOQlycs308m75rKlAZr3g5kAbd841_tvxXX3g6CxHZI=",
-        },
-        {
-          id: 5,
-          imageUrl: "https://media.istockphoto.com/id/1294450400/es/foto/campeche-mexico.jpg?s=1024x1024&w=is&k=20&c=GOQlycs308m75rKlAZr3g5kAbd841_tvxXX3g6CxHZI=",
+          imageUrl: "4.png",
         },
       ])
 
