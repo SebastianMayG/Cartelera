@@ -8,16 +8,17 @@ import { useToast } from "primevue/usetoast";
 import 'primeicons/primeicons.css';
 import { useCarruselStore}from '@/stores/imagenesCarrusel';
 import Carousel from 'primevue/carousel';
+import { useRouter } from 'vue-router'; // Añade esta importación
 
 const toast = useToast();
+const router = useRouter(); // Instancia el router aquí
 const eventsStore = useEventsStore();
 const eventsCarruselStore = useCarruselStore() // Contiene una referencia a los eventos. Revisar src/stores/imagenesCarrusel.js
 const visible = ref(false);
 const selectedImage = ref('');
 
 const handleInscription = (eventId) => {
-  console.log(`Inscribirse al evento con ID: ${eventId}`);
-  toast.add({ severity: 'info', summary: 'Info', detail: 'Inscrito al evento', life: 3000 });
+  router.push({ name: 'event-detail', params: { id: eventId } });
 };
 
 const showImageModal = (imageUrl) => {
@@ -94,7 +95,7 @@ const showImageModal = (imageUrl) => {
         <!-- Pie de tarjeta con botón -->
         <div class="card-footer">
           <Button 
-            label="Reservar" 
+            label="Más información" 
             icon="pi pi-calendar-plus" 
             class="reserve-btn" 
             @click="handleInscription(event.id)" 
