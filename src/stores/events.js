@@ -5,7 +5,7 @@ export const useEventsStore = defineStore('event', () => {
     const events = ref([
         {
           id: 1,
-          imageUrl: '/artesMundoNeurodivergentes.jpeg',
+          imageUrl: 'artesMundoNeurodivergentes.jpeg',
           title: 'Las artes y el mundo neurodivergente en primera persona',
           description: 'Festival conmemorativo al día internacional de la conciencia sobre el autismo',
           location: 'Centro de Formación y Producción de Artes Visuales La Arrocera',
@@ -15,7 +15,7 @@ export const useEventsStore = defineStore('event', () => {
         },
         {
           id: 2,
-          imageUrl: '/HoraCuento.jpg',
+          imageUrl: 'HoraCuento.jpg',
           title: 'La Hora del Cuento',
           description: 'Presentación del libro Cuentame lo que te imagínas, relatos de niñas y niños',
           location: 'Biblioteca Pública Central Lic. Francisco Sosa Escalante',
@@ -25,7 +25,7 @@ export const useEventsStore = defineStore('event', () => {
         },
         {
           id: 3,
-          imageUrl: '/public/ObrasBeethoven.jpg',
+          imageUrl: 'public/ObrasBeethoven.jpg',
           title: 'Obras de Beethoven y Haydn',
           description: 'Orquesta Sinfónica de Campeche interpretando Beethoven y Haydn',
           location: 'Teatro Francisco de Paula Toro',
@@ -35,7 +35,7 @@ export const useEventsStore = defineStore('event', () => {
         },
         {
           id: 4,
-          imageUrl: '/ElArbolLecturaDramatizada.jpg',
+          imageUrl: 'ElArbolLecturaDramatizada.jpg',
           title: 'El Árbol lectura dramatizada',
           description: 'Lectura dramatizada versión libre',
           location: 'Sala Teatro Manuel Ávila Cano del Centro Cultural El Claustro',
@@ -45,7 +45,7 @@ export const useEventsStore = defineStore('event', () => {
         },
         {
           id: 5,
-          imageUrl: '/BrigadaCorteCabello.jpg',
+          imageUrl: 'BrigadaCorteCabello.jpg',
           title: 'Brigada de Corte de Cabello Para niñas y damas',
           description: 'Degusta los mejores platillos de mariscos de la región.',
           location: 'Centro de Desarrollo Comunitario Imí II',
