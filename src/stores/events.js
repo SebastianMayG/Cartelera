@@ -25,7 +25,7 @@ export const useEventsStore = defineStore('event', () => {
         },
         {
           id: 3,
-          imageUrl: 'public/ObrasBeethoven.jpg',
+          imageUrl: 'ObrasBeethoven.jpg',
           title: 'Obras de Beethoven y Haydn',
           description: 'Orquesta Sinfónica de Campeche interpretando Beethoven y Haydn',
           location: 'Teatro Francisco de Paula Toro',

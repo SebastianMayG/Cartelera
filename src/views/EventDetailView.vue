@@ -11,25 +11,29 @@ const eventsStore = useEventsStore();
 const event = ref(null);
 const isLoading = ref(true);
 
+const getImageUrl = (filename) => {
+  return new URL(`/public/${filename}`, import.meta.url).href;
+};
+
 // Lugares cercanos hardcodeados
 const nearbyPlaces = ref([
   {
     name: "Holiday Inn",
-    imageUrl: "/Holiday-Inn-Logo.jpg",
-    location: "https://maps.app.goo.gl/example1",
-    address: "Av. Principal 123"
+    imageUrl: getImageUrl('Holiday-Inn-Logo.jpg'),
+    location: "https://maps.app.goo.gl/BXwehQT4HkD71Tx87",
+    address: "Ubicación"
   },
   {
-    name: "Lapa",
-    imageUrl: "/Lapa-Logo.jpg",
-    location: "https://maps.app.goo.gl/example2",
-    address: "Calle Secundaria 456"
+    name: "Lapa Campeche",
+    imageUrl: getImageUrl("Lapa-Logo.jpg"),
+    location: "https://maps.app.goo.gl/EuftRwUkSGawAnMV9",
+    address: "Ubicación"
   },
   {
     name: "Frappisimo",
-    imageUrl: "/Frappisimo-Logo.jpg",
-    location: "https://maps.app.goo.gl/example3",
-    address: "Plaza Central 789"
+    imageUrl: getImageUrl("Frappisimo-Logo.jpg"),
+    location: "https://www.google.com.mx/maps/search/Frappisimo/@19.838485,-90.5593204,14.45z?entry=ttu&g_ep=EgoyMDI1MDUwMy4wIKXMDSoASAFQAw%3D%3D",
+    address: "Ubicación"
   }
 ]);
 
@@ -65,7 +69,7 @@ const loadEvent = () => {
         <div class="event-content">
           <!-- Sección de imagen -->
           <div class="event-image-section">
-            <img :src="event.imageUrl" :alt="event.title" class="main-event-image" />
+            <img :src=getImageUrl(event.imageUrl) :alt="event.title" class="main-event-image" />
           </div>
           
           <!-- Sección de información -->
@@ -345,6 +349,97 @@ const loadEvent = () => {
   
   .place-info h3 {
     margin-top: 0.5rem;
+  }
+}
+
+.map-and-places {
+  display: grid;
+  grid-template-columns: 70% 28%;
+  gap: 2%;
+  margin-top: 3rem;
+}
+
+.map-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+  border-radius: 8px;
+}
+
+.nearby-places-container {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  overflow-y: auto;
+}
+
+.places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.place-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.place-image {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background: white;
+  padding: 3px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.place-info h3 {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.place-location {
+  font-size: 0.8rem;
+}
+
+@media (max-width: 992px) {
+  .map-and-places {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .map-container iframe {
+    height: 350px;
+  }
+  
+  .places-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+  
+  .place-card {
+    min-width: 150px;
+    flex-direction: column;
   }
 }
 </style>
